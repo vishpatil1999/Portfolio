@@ -131,7 +131,7 @@ export default function Work() {
             rating: "4.8",
             users: "40k",
             gradient: "from-amber-50 to-amber-200",
-            playstoreLink: "https://play.google.com/store",
+            playstoreLink: "https://github.com/vishpatil1999/RularApp.git",
         },
          {
             id: 3,
