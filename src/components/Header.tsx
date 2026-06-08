@@ -1,8 +1,16 @@
+
 export default function Header() {
+
+  function downloadResume() {
+    const link = document.createElement("a");
+    link.href = "/assets/cv.pdf";
+    link.download = "Vishakha_Patil_Resume.pdf";
+    link.click();
+  }
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <img
-        src="./assets/profile-img.png"
+        src="./assets/profile.png"
         alt=""
         className="rounded-full w-32"
       />
@@ -26,19 +34,17 @@ export default function Header() {
           contact me{" "}
           <img src="./assets/right-arrow-white.png" alt="" className="w-4" />
         </a>
-
-        <a
-          href="./assets/dev-icon.png"
-          download
+        <button
+          onClick={downloadResume}
           className="px-10 py-2.5 rounded-full border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover flex items-center gap-2 bg-white dark:bg-transparent dark:text-white"
         >
-          my resume{" "}
+          My Resume
           <img
             src="./assets/download-icon.png"
-            alt=""
+            alt="Download"
             className="w-4 dark:invert"
           />
-        </a>
+        </button>
       </div>
     </div>
   );
